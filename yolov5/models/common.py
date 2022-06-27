@@ -11,7 +11,6 @@ from collections import OrderedDict, namedtuple
 from copy import copy
 from pathlib import Path
 
-import cv2
 import numpy as np
 import pandas as pd
 import requests
@@ -324,6 +323,7 @@ class DetectMultiBackend(nn.Module):
         elif dnn:  # ONNX OpenCV DNN
             LOGGER.info(f'Loading {w} for ONNX OpenCV DNN inference...')
             check_requirements(('opencv-python>=4.5.4',))
+            import cv2
             with yolov5_in_syspath():
                 net = cv2.dnn.readNetFromONNX(w)
         elif onnx:  # ONNX Runtime

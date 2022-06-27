@@ -31,7 +31,7 @@ setuptools.setup(
     description="Packaged version of the Yolov5 object detector",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
-    url="https://github.com/fcakyon/yolov5-pip",
+    url="https://github.com/oxin-ros/yolov5-pip",
     packages=setuptools.find_packages(exclude=["tests"]),
     python_requires=">=3.6",
     install_requires=get_requirements(),
